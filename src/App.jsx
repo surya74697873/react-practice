@@ -1,9 +1,11 @@
-import Accordian from "./Accordian/Accordian";
+// import Accordian from "./Accordian/Accordian";
+import HexaRGB from "./HexaRGB/HexaRGB";
 
 const App = () => {
     return (
         <div>
-            <Accordian/>
+            <HexaRGB />
+            {/* <Accordian/> */}
         </div>
     );
 }
