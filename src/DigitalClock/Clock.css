@@ -1,0 +1,20 @@
+#container{
+    display: flex;
+    width: max-content;
+    gap: 10px;
+    color: maroon;
+    font-weight: bold;
+    padding: 2em;
+    background-color: aqua;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 1em;
+    box-shadow: 5px 5px 10px rgb(34, 43, 43) , inset 5px 5px 10px rgb(34, 43, 43);
+}
+
+.hours,.minutes,.seconds,.ampm,span{
+    font-size: 5em;
+
+}

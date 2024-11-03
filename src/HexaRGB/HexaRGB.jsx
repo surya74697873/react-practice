@@ -13,7 +13,7 @@ const HexaRGB = () => {
     function rgbGenerator() {
         let number = [];
         for (let i = 0; i < 3; i++)
-            number[i] = randomNumber(1000);
+            number[i] = randomNumber(256);
         setcolor(`rgb(${number[0]}, ${number[1]}, ${number[2]})`)
         setType('RGB Color')
     }
