@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import PropTypes from 'prop-types'
 import { BiArrowFromLeft, BiArrowFromRight } from "react-icons/bi";
+import './ImageSlider.css'
 
 const ImageSlider = ({ url, page = 5, limit = 0 }) => {
 
