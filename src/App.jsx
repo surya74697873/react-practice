@@ -11,7 +11,7 @@ const App = () => {
             {/* <Accordian/> */}
             {/* <StarRating /> */}
             {/* <Clock /> */}
-            <ImageSlider url="url" />
+            <ImageSlider url={"https://picsum.photos/v2/list"} page={5} limit={10} />
         </div>
     );
 }
