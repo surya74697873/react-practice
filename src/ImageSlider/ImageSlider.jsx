@@ -5,7 +5,7 @@ import { BiArrowFromLeft, BiArrowFromRight } from "react-icons/bi";
 const ImageSlider = ({ url, page = 5, limit = 0 }) => {
 
     const [currentSlider, setCurrentSlider] = useState(0);
-    const [images, setImages] = useState(null);
+    const [images, setImages] = useState([]);
     const [loading, setLoading] = useState(false)
 
 
@@ -46,16 +46,16 @@ const ImageSlider = ({ url, page = 5, limit = 0 }) => {
         <div id="container">
             <BiArrowFromLeft onClick={prevImage} style={{ cursor: "pointer" }} />
 
-            {images.length > 0 ? images.map((image, index) => {
-                return <img src={image.url} alt={image.download_url} key={index} />
-            }) : <p>Images Not Received</p>}
+            {images.length > 0 ? images.map((image, index) => 
+                 <img src={image.download_url} alt={image.download_url} key={index} />
+            ) : <p>Images Not Received</p>}
 
             <BiArrowFromRight onClick={nextImage} style={{ cursor: "pointer" }} />
         </div>
     );
 }
 
-ImageSlider.prototype = {
+ImageSlider.propTypes = {
     url: PropTypes.string.isRequired,
     page: PropTypes.number,
     limit: PropTypes.number,
