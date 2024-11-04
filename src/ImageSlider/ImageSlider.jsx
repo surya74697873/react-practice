@@ -47,7 +47,7 @@ const ImageSlider = ({ url, page = 5, limit = 0 }) => {
           background: "white",
           bottom: "50%",
           borderRadius: "50%",
-          left: "0.5em",
+          right: "0.5em",
         }}
       />
 
@@ -73,7 +73,7 @@ const ImageSlider = ({ url, page = 5, limit = 0 }) => {
           background: "white",
           bottom: "50%",
           borderRadius: "50%",
-          right: "0.5em",
+          left: "0.5em",
         }}
       />
 
