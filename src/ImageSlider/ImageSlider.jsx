@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { BiArrowFromLeft, BiArrowFromRight } from "react-icons/bi";
+// import { Bars } from "react-loading-icons";
 import "./ImageSlider.css";
+import Oval from "react-loading-icons/dist/esm/components/oval";
 
 const ImageSlider = ({ url, page = 5, limit = 0 }) => {
   const [currentSlider, setCurrentSlider] = useState(0);
@@ -34,7 +36,17 @@ const ImageSlider = ({ url, page = 5, limit = 0 }) => {
     setCurrentSlider((next) => (next == images.length - 1 ? 0 : next + 1));
   }
 
-  if (loading) return <div id="load">Loading... Please Wait</div>;
+  // if (loading) return <div id="load">Loading... Please Wait</div>;
+
+  if (loading)
+    return (
+      <div id="load">
+        <Oval
+          style={{ height: "50px", width: "50px", background: "wheat" }}
+          stroke="black"
+        />
+      </div>
+    );
 
   return (
     <div id="container">
@@ -48,7 +60,7 @@ const ImageSlider = ({ url, page = 5, limit = 0 }) => {
           bottom: "50%",
           borderRadius: "50%",
           left: "0.5em",
-        }}
+        }} 
       />
 
       {images.length > 0 ? (

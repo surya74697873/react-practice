@@ -6,6 +6,8 @@
   border-radius: 30px;
   overflow: hidden;
   justify-self: baseline;
+  background-color: wheat;
+
 }
 
 #container{
@@ -13,6 +15,7 @@
 }
 
 #load{
+  width: 700px;
   align-items: center;
   justify-content: center;
   font-size: 2em;
