@@ -1,0 +1,23 @@
+.Quiz{
+    max-width: 800px;
+    background-color: aqua;
+    border: 1px solid lightcoral;
+    text-align: center;
+    padding: 1.5em;
+    border-radius: 1.5em;
+}
+
+p,h2{
+    margin-bottom: 1em;
+}
+
+.score-section{
+    display: none;
+}
+
+button{
+    border-radius: 1em;
+    padding: .8em 1.3em;
+    border: 1px solid;
+    margin: 0 0.5em 1em 0.5em;
+}
