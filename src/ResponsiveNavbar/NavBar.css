@@ -30,6 +30,7 @@ ul {
 }
 
 li {
+  width: 100%;
   flex-grow: 1;
   flex-basis: 0;
   text-align: center;
@@ -51,6 +52,7 @@ a{
 a:hover{
   background-color: aliceblue;
 }
+
 .Menu {
   width: 1.8em;
   display: none;
@@ -87,7 +89,7 @@ a:hover{
   ul {
     display: block;
     position: absolute;
-    top: 56px;
+    top: 9.5%;
     right: -100%;
     opacity: 0; 
     transition: right 1s ease-in-out, opacity 1s ease-in-out; 
@@ -105,5 +107,12 @@ a:hover{
   .Visible {
     opacity: 1;
     right: 0;
+  }
+  li
+  a{
+    border: none;
+  }
+  a:hover{
+    background-color: none;
   }
 }
