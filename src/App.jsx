@@ -3,7 +3,7 @@
 // import StarRating from "./Star-Rating/StarRating";
 // import Clock from "./DigitalClock/Clock";
 // import ImageSlider from "./ImageSlider/ImageSlider";
-import './App.css'
+// import './App.css'
 import NavBar from './ResponsiveNavbar/NavBar';
 // import Quiz from "./Quiz/Quiz";
 
