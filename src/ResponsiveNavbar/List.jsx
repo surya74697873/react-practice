@@ -1,24 +1,24 @@
 const Home = () => {
     return (
-        <h1>HOME</h1>
+        <h1 className="Content">HOME</h1>
     )
 }
 
 const About = () => {
     return (
-        <h1>ABOUT</h1>
+        <h1 className="Content">ABOUT</h1>
     )
 }
 
 const Services = () => {
     return (
-        <h1>SERVICES</h1>
+        <h1 className="Content">SERVICES</h1>
     )
 }
 
 const Contact = () => {
     return (
-        <h1>CONTACT</h1>
+        <h1 className="Content">CONTACT</h1>
     )
 }
 

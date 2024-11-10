@@ -1,0 +1,41 @@
+.NavBar{
+ height: 100%;
+ width: 100%;
+}
+
+.LayOut{
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.LayOut > h1{
+  flex: 2;
+  flex-basis: 0;
+}
+
+ul{
+  display: flex;
+  list-style: none;
+  flex: 2;
+  flex-basis: 0;
+}
+
+li{
+  flex: 1;
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.NavBar > h1{
+  display: grid;
+  place-items: center;
+  border: 1px solid ;
+  height: 100%;
+  font-size: 3rem;
+}

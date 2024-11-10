@@ -4,8 +4,9 @@ import "./NavBar.css";
 
 const LayOut = () => {
   return (
-    <>
-      <ul className="LayOut">
+    <div className="LayOut">
+      <h1>LOGO</h1>
+      <ul>
         <li>
           <Link to='/'>Home</Link>
         </li>
@@ -18,18 +19,14 @@ const LayOut = () => {
         <li>
           <Link to={'/contact'}>Contact</Link>
         </li>
-        <li>
-          <Link></Link>
-        </li>
       </ul>
-    </>
+    </div>
   );
 };
 
 const NavBar = () => {
   return (
-    <div>
-      <h1>LOGO</h1>
+    <div className="NavBar">
       <BrowserRouter>
         <LayOut />
         <Routes>
