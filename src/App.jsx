@@ -3,9 +3,9 @@
 // import StarRating from "./Star-Rating/StarRating";
 // import Clock from "./DigitalClock/Clock";
 // import ImageSlider from "./ImageSlider/ImageSlider";
-// import './App.css'
-import NavBar from './ResponsiveNavbar/NavBar';
-// import Quiz from "./Quiz/Quiz";
+import './App.css'
+//import NavBar from './ResponsiveNavbar/NavBar';
+import Quiz from "./Quiz/Quiz";
 
 const App = () => {
     return (
@@ -15,8 +15,8 @@ const App = () => {
             {/* <StarRating /> */}
             {/* <Clock /> */}
             {/* <ImageSlider url={"https://picsum.photos/v2/list"} page={5} limit={10} /> */}
-            {/* <Quiz /> */}
-            <NavBar />
+            {/* <NavBar /> */}
+            <Quiz />
         </div>
     );
 }
