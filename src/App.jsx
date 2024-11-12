@@ -4,8 +4,9 @@
 // import Clock from "./DigitalClock/Clock";
 // import ImageSlider from "./ImageSlider/ImageSlider";
 import './App.css'
+import Calender from './Calender/Calender';
 //import NavBar from './ResponsiveNavbar/NavBar';
-import Quiz from "./Quiz/Quiz";
+// import Quiz from "./Quiz/Quiz";
 
 const App = () => {
     return (
@@ -16,7 +17,8 @@ const App = () => {
             {/* <Clock /> */}
             {/* <ImageSlider url={"https://picsum.photos/v2/list"} page={5} limit={10} /> */}
             {/* <NavBar /> */}
-            <Quiz />
+            {/* <Quiz /> */}
+            <Calender />
         </div>
     );
 }

@@ -1,0 +1,22 @@
+.Calender{
+    border: 1px solid;
+    padding: .5em;
+}
+
+.header{
+    display: flex;
+}
+
+button{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+#left{
+    background: url(./icons/left.svg) no-repeat center/cover;
+}
+
+#right{
+    background: url(./icons/right.svg) no-repeat center/cover;
+}
