@@ -12,10 +12,15 @@ p,h2{
 }
 
 .score-section{
-    display: none;
+    width: 100%;
+}
+
+.options{
+    display: flex;
 }
 
 button{
+    width: 150px;
     border-radius: 1em;
     padding: .8em 1.3em;
     border: 1px solid;
