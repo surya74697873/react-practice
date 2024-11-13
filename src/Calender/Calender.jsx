@@ -24,7 +24,6 @@ function Calender() {
   const [lastDate, setLastDate] = useState(0);
 
   useEffect(() => {
-    // Set the first day and last date of the current month whenever currentDate changes
     console.log(currentDate);
     const year = currentDate.getFullYear();
     const month = currentDate.getMonth();
@@ -34,7 +33,6 @@ function Calender() {
 
   function handleMonth(value) {
     let month = months.indexOf(value);
-    console.log(month+"month");
     setCurrentDate(prevDate => new Date(prevDate.getFullYear(),month,1))
   }
 
@@ -43,17 +41,24 @@ function Calender() {
     setCurrentDate(prevDate => new Date(year,prevDate.getMonth() + 1,1))
   }
 
-  console.log(firstDay,lastDate);
+  function increaseMonth(){
+    setCurrentDate(prevDate => new Date(prevDate.getFullYear(),prevDate.getMonth() + 1,1))
+  }
   
+  function decreaseMonth(){
+    setCurrentDate(prevDate => new Date(prevDate.getFullYear(),prevDate.getMonth() - 1,1))
+  }
+
 
   return (
     <div className="Calender">
       <div className="Header">
-        <button id="left"></button>
+        <button id="left" onClick={decreaseMonth}></button>
         <select
           name="months"
           id="months"
           onChange={(e) => handleMonth(e.target.value)}
+          value={months[currentDate.getMonth()]}
         >
           {months.map((option, index) => (
             <option key={index} value={option}>
@@ -65,6 +70,7 @@ function Calender() {
           name="years"
           id="years"
           onChange={(e) => handleYear(e.target.value)}
+          value={currentDate.getFullYear()}
         >
           {[...Array(10)].map((_, index) => {
             let year = currentDate.getFullYear() - index + 1;
@@ -75,15 +81,13 @@ function Calender() {
             );
           })}
         </select>
-        <button id="right"></button>
-      </div>
-      <div className="Days">
-        {days.map((day, index) => (
-          <div key={index}>{day}</div>
-        ))}
+        <button id="right" onClick={increaseMonth}></button>
       </div>
       <div className="Dates">
-        {[...Array((lastDate + firstDay < 35) ? 35 : 42)].map((_, index) => (
+        {days.map((day, index) => (
+          <div className="Day" key={index}>{day}</div>
+        ))}
+        {[...Array((lastDate + firstDay <= 35) ? 35 : 42)].map((_, index) => (
           <div key={index} className="Date">
             {firstDay <= index && lastDate + firstDay > index ? index - firstDay + 1: ""}
           </div>
