@@ -13,12 +13,24 @@
 .Days{
     display: flex;
     gap: 10px;
+    border: 1px solid;
 }
 
-.Days > div{
-    margin: .5em;
+.Days div{
     flex: 1;
-    flex-basis: 0;
+    text-align: center;
+    border: 1px solid;
+}
+
+.Dates{
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+    border: 1px solid;
+    gap: 10px;
+}
+
+.Date{
+    border: 1px solid;
     text-align: center;
 }
 
