@@ -38,6 +38,11 @@
 .Date, .Day{
     padding: .4em;
 }
+
+.Today{
+    background-color: orange;
+}
+
 select{
     border-radius: 1em;
     padding: .5em;

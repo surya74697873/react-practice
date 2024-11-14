@@ -33,22 +33,34 @@ function Calender() {
 
   function handleMonth(value) {
     let month = months.indexOf(value);
-    setCurrentDate(prevDate => new Date(prevDate.getFullYear(),month,1))
+    setCurrentDate((prevDate) => new Date(prevDate.getFullYear(), month, 1));
   }
 
   function handleYear(value) {
     let year = value;
-    setCurrentDate(prevDate => new Date(year,prevDate.getMonth() + 1,1))
+    setCurrentDate((prevDate) => new Date(year, prevDate.getMonth() + 1, 1));
   }
 
-  function increaseMonth(){
-    setCurrentDate(prevDate => new Date(prevDate.getFullYear(),prevDate.getMonth() + 1,1))
-  }
-  
-  function decreaseMonth(){
-    setCurrentDate(prevDate => new Date(prevDate.getFullYear(),prevDate.getMonth() - 1,1))
+  function increaseMonth() {
+    setCurrentDate(
+      (prevDate) => new Date(prevDate.getFullYear(), prevDate.getMonth() + 1, 1)
+    );
   }
 
+  function decreaseMonth() {
+    setCurrentDate(
+      (prevDate) => new Date(prevDate.getFullYear(), prevDate.getMonth() - 1, 1)
+    );
+  }
+
+  function isToday(index) {
+    const today = new Date();
+    return (
+      today.getDate() === index - firstDay + 1 &&
+      today.getMonth() === currentDate.getMonth() &&
+      today.getFullYear() === currentDate.getFullYear()
+    );
+  }
 
   return (
     <div className="Calender">
@@ -85,11 +97,15 @@ function Calender() {
       </div>
       <div className="Dates">
         {days.map((day, index) => (
-          <div className="Day" key={index}>{day}</div>
+          <div className="Day" key={index}>
+            {day}
+          </div>
         ))}
-        {[...Array((lastDate + firstDay <= 35) ? 35 : 42)].map((_, index) => (
-          <div key={index} className="Date">
-            {firstDay <= index && lastDate + firstDay > index ? index - firstDay + 1: ""}
+        {[...Array(lastDate + firstDay <= 35 ? 35 : 42)].map((_, index) => (
+          <div key={index} className={`Date ${isToday(index) && "Today"}`}>
+            {firstDay <= index && lastDate + firstDay > index
+              ? index - firstDay + 1
+              : ""}
           </div>
         ))}
       </div>
