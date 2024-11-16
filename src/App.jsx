@@ -4,7 +4,8 @@
 // import Clock from "./DigitalClock/Clock";
 // import ImageSlider from "./ImageSlider/ImageSlider";
 import './App.css'
-import Calender from './Calender/Calender';
+import WeatherForecast from './WeatherForecast/WeatherForecast';
+// import Calender from './Calender/Calender';
 //import NavBar from './ResponsiveNavbar/NavBar';
 // import Quiz from "./Quiz/Quiz";
 
@@ -18,7 +19,8 @@ const App = () => {
             {/* <ImageSlider url={"https://picsum.photos/v2/list"} page={5} limit={10} /> */}
             {/* <NavBar /> */}
             {/* <Quiz /> */}
-            <Calender />
+            {/* <Calender /> */}
+            <WeatherForecast url='http://api.weatherapi.com/v1/current.json' />
         </div>
     );
 }
