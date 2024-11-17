@@ -92,15 +92,15 @@ const Quotes = ({ url, apiKey }) => {
   return (
     <div className="Quotes">
       <div className="lists">
-          {categoryList.map((data, index) => (
-            <p key={index + 1}>{data}</p>
-          ))}
+        {categoryList.map((data, index) => (
+          <p key={index + 1}>{data}</p>
+        ))}
       </div>
       <div className="display">
         {quote ? (
           <div className="Quote">
-            <h1>{quote[0].quote}</h1>
-            <h2>{quote[0].author}</h2>
+            <p>{quote[0].quote}</p>
+            <h2>- {quote[0].author}</h2>
           </div>
         ) : (
           <p>Hi Click Button and Get Quotes</p>
