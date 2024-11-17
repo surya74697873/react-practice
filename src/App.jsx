@@ -20,7 +20,7 @@ const App = () => {
             {/* <NavBar /> */}
             {/* <Quiz /> */}
             {/* <Calender /> */}
-            <WeatherForecast url='http://api.weatherapi.com/v1/current.json' />
+            <WeatherForecast url='http://api.weatherapi.com/v1/current.json' apiKey='6ddd5e82bc544b8f93794446241511'/>
         </div>
     );
 }
