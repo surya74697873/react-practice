@@ -4,10 +4,11 @@
 // import Clock from "./DigitalClock/Clock";
 // import ImageSlider from "./ImageSlider/ImageSlider";
 import './App.css'
-import WeatherForecast from './WeatherForecast/WeatherForecast';
+// import WeatherForecast from './WeatherForecast/WeatherForecast';
 // import Calender from './Calender/Calender';
 //import NavBar from './ResponsiveNavbar/NavBar';
-// import Quiz from "./Quiz/Quiz";
+// import Quiz from "./Quiz/Quiz"; 
+import Quotes from './Quotes/Quotes';
 
 const App = () => {
     return (
@@ -20,7 +21,8 @@ const App = () => {
             {/* <NavBar /> */}
             {/* <Quiz /> */}
             {/* <Calender /> */}
-            <WeatherForecast url='http://api.weatherapi.com/v1/current.json' apiKey='6ddd5e82bc544b8f93794446241511'/>
+            {/* <WeatherForecast url='http://api.weatherapi.com/v1/current.json' apiKey='6ddd5e82bc544b8f93794446241511'/> */}
+            <Quotes url='https://api.api-ninjas.com/v1/quotes' apiKey='cZWKPfFHmBBxoHB2+vEW2w==dITHcEDEXE23LcVn'/>
         </div>
     );
 }

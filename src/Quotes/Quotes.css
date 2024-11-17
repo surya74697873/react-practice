@@ -1,0 +1,26 @@
+.Quotes {
+    height: 100%;
+    display: flex;
+    border: 1px solid;
+    flex-wrap: wrap;
+}
+
+.lists {
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid;
+    padding: 1em;
+}
+
+.lists>p {
+    width: 150px;
+}
+
+.display {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
