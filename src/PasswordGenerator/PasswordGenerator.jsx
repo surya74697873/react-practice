@@ -6,10 +6,11 @@ const PasswordGenerator = () => {
   const [lowerCase, includeLocwerCase] = useState(false);
   const [numbers, includeNumbers] = useState(false);
   const [symbols, includeSymbols] = useState(false);
+  const [password, setPassword] = useState(null)
 
   console.log(upperCase,lowerCase,numbers,symbols);
 
-    function randowNumberGenerator(length){
+    function randomNumberGenerator(length){
         return Math.floor(Math.random() * length)
     }   
   
@@ -23,8 +24,9 @@ const PasswordGenerator = () => {
         let PassWord = '';
 
         for(let i = 0; i < length; i++){
-
+          PassWord += PassWordSetUp[randomNumberGenerator(PassWordSetUp.length)]
         }
+        setPassword(PassWord)
     }
   return (
     <div className="PasswordGenerator">
@@ -69,7 +71,7 @@ const PasswordGenerator = () => {
       </div>
       <button>Generate</button>
       <div className="ClipBoard">
-        <input type="text" readOnly />
+        <input type="text" value={Password} readOnly />
         <button>Copy</button>
       </div>
     </div>
