@@ -7,32 +7,39 @@ const PasswordGenerator = () => {
   const [numbers, includeNumbers] = useState(false);
   const [symbols, includeSymbols] = useState(false);
   const [password, setPassword] = useState(null)
+  const [passLength, setPassLength] = useState(0);
 
   console.log(upperCase,lowerCase,numbers,symbols);
 
+
+    function copyClipBoard(){
+      navigator.clipboard.writeText(password)
+    }
+    
     function randomNumberGenerator(length){
         return Math.floor(Math.random() * length)
     }   
   
-    function Generator(length){
+    function Generator(){
         let PassWordSetUp = "";
-        if(upperCase) PassWord += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        if(lowerCase) PassWord += 'abcdefghijklmnopqrstuvwxyz'
-        if(numbers) PassWord += '0123456789'
-        if(symbols) PassWord += '!@#$%^&*()-_=+'
+        if(upperCase) PassWordSetUp += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        if(lowerCase) PassWordSetUp += 'abcdefghijklmnopqrstuvwxyz'
+        if(numbers) PassWordSetUp += '0123456789'
+        if(symbols) PassWordSetUp += '!@#$%^&*()-_=+'
 
-        let PassWord = '';
+        let PassWord = new String();
 
-        for(let i = 0; i < length; i++){
+        for(let i = 0; i < passLength; i++){
           PassWord += PassWordSetUp[randomNumberGenerator(PassWordSetUp.length)]
         }
+        console.log(PassWord)
         setPassword(PassWord)
     }
   return (
     <div className="PasswordGenerator">
       <h1>Strong PassWord Generator</h1>
       <p>Password Length :</p>
-      <input type="text" placeholder="Password Length" />
+      <input type="text" placeholder="Password Length" onChange={(e)=> setPassLength(e.target.value)}/>
       <div className="checklists">
         {" "}
         <input
@@ -69,10 +76,10 @@ const PasswordGenerator = () => {
         />{" "}
         <span>Include Symbols</span>
       </div>
-      <button>Generate</button>
+      <button onClick={Generator}>Generate</button>
       <div className="ClipBoard">
-        <input type="text" value={Password} readOnly />
-        <button>Copy</button>
+        <input type="text" value={password} readOnly />
+        <button onClick={copyClipBoard}>Copy</button>
       </div>
     </div>
   );
