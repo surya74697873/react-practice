@@ -4,7 +4,8 @@
 // import Clock from "./DigitalClock/Clock";
 // import ImageSlider from "./ImageSlider/ImageSlider";
 import './App.css'
-import PasswordGenerator from './PasswordGenerator/PasswordGenerator';
+import FilterTable from './FilterTable/FilterTable';
+// import PasswordGenerator from './PasswordGenerator/PasswordGenerator';
 // import WeatherForecast from './WeatherForecast/WeatherForecast';
 // import Calender from './Calender/Calender';
 //import NavBar from './ResponsiveNavbar/NavBar';
@@ -24,7 +25,8 @@ const App = () => {
             {/* <Calender /> */}
             {/* <WeatherForecast url='http://api.weatherapi.com/v1/current.json' apiKey='6ddd5e82bc544b8f93794446241511'/> */}
             {/* <Quotes url='https://api.api-ninjas.com/v1/quotes' apiKey='cZWKPfFHmBBxoHB2+vEW2w==dITHcEDEXE23LcVn'/> */}
-            <PasswordGenerator />
+            {/* <PasswordGenerator /> */}
+            <FilterTable />
         </div>
     );
 }

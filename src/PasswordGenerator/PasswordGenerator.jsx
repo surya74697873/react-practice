@@ -79,7 +79,7 @@ const PasswordGenerator = () => {
       <button onClick={Generator}>Generate</button>
       <div className="ClipBoard">
         <input type="text" value={password} readOnly />
-        <button onClick={copyClipBoard}>Copy</button>
+        <button id="copy" onClick={copyClipBoard}>Copy</button>
       </div>
     </div>
   );
