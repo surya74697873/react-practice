@@ -1,7 +1,7 @@
 .FilterTable{
     height: 100vh;
     margin-top: 5em;
-    max-width: 900px;
+    width: 80vw;
 }
 h1,.SearchBar,hr, table{
     margin-bottom: 1em;
@@ -16,6 +16,7 @@ table{
     border: 1px solid;
     padding: 1em;
     border-collapse: collapse;
+    width: 100%;
 }
 
 td,th{
