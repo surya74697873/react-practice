@@ -1,4 +1,5 @@
 import Product from './Product'
+import './Home.css'
 import {useState, useEffect} from "react"
 const Home = () => {
   
@@ -17,7 +18,7 @@ const Home = () => {
   useEffect(()=>{apiCall()},[])
   console.log(data);
     return (
-        <div>
+        <div className="Home">
             {
              data.length > 0 && data.map((item, index) => (<Product key={item.idCategory} 
                 image={item.strCategoryThumb} desc={item.strCategoryDescription}

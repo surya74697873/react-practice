@@ -1,0 +1,15 @@
+.Product-item{
+  width: 200px;
+  border: 1px solid ;
+  flex: 1;
+}
+p{
+  display: none;
+  
+}
+img{
+  height: inherit;
+  width: inherit;
+}
+
+
