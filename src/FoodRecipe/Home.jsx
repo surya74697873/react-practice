@@ -21,13 +21,14 @@ const Home = () => {
   useEffect(() => {
     apiCall();
   }, []);
-  console.log(data);
+  //console.log(data);
   return (
     <div className="Home">
       {data.length > 0 &&
         data.map((item) => (
           <Product
-            key={item.idCategory}
+            key={item.idCategory} 
+            id={item.idCategory} 
             image={item.strCategoryThumb}
             name={item.strCategory}
             price={item.idCategory}

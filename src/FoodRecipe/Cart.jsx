@@ -11,10 +11,10 @@ const Cart = () => {
             {
                 cart.length > 0 && cart.map((item) => (
                 <Product
-                key={item.id}
+                key={item.price}
                 image={item.image}
                 name={item.name}
-                price={item.id}
+                price={item.price}
               />))
             }
         </div>
