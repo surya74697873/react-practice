@@ -1,0 +1,8 @@
+.Cart{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
