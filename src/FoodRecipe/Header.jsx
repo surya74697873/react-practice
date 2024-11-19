@@ -6,10 +6,10 @@ const Header = () => {
             <h1>FoodRecipe</h1>
             <ol>
                 <li>
-                    <Link to={'/'}>Home</Link>
+                    <Link className="Links" to={'/'}>Home</Link>
                 </li>
                 <li>
-                    <Link to={'/cart'}>Cart</Link>
+                    <Link className="Links" to={'/cart'}>Cart</Link>
                 </li>
             </ol>
         </div>

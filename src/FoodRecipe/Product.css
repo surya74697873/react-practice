@@ -1,15 +1,32 @@
-.Product-item{
-  width: 200px;
-  border: 1px solid ;
-  flex: 1;
+.Product-item {
+  border: 1px solid;
+  padding: 1em;
 }
+
+h2{
+  font-size: 1.4em;
+}
+
 p{
-  display: none;
-  
+  font-size: 1.2em;
 }
-img{
+
+img {
   height: inherit;
-  width: inherit;
+  width: 100%;
 }
 
+button {
+  min-width: 120px;
+  height: 2.5em;
+  border-radius: 10px;
+  border: .5px solid;
+  background-color: lightcoral;
+  color: white;
+}
 
+h1,
+p,
+button {
+  margin-top: 1em;
+}

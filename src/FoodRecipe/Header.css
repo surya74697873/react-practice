@@ -1,25 +1,37 @@
-.Header{
-    width: 100%;
-    border: 1px solid;
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-    background: rgba(0,0,1,0.4);
-}
-
-h1{
-  font-size: 1.5em;
-}
-
-ol{
-  list-style: none;
+.Header {
   display: flex;
-  column-gap: 10px;
-  place-items: center;
-  font-weight: bold;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid;
 }
 
-a{
-  text-decoration: none;
-  color: black;
+.Header > h1 {
+  margin: 0;
+  padding: 5px; 
+  font-size: 1.5rem;
+  color: #333;
+  letter-spacing: 1px;
+
 }
+
+ol {
+  display: flex;
+  list-style: none;
+  column-gap: 20px;
+  place-items: center;
+}
+
+.Links {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.Links:hover {
+  color: #0056b3; 
+}
+
+
+
