@@ -1,5 +1,5 @@
 import "./Product.css";
-import PropTypes, { func } from "prop-types";
+import PropTypes from "prop-types";
 import { cartContext } from "./Context";
 import { useContext } from "react";
 
@@ -9,19 +9,17 @@ function Product(item) {
 
   function addCart() {
     setCart((prevCart) => [...prevCart, item]);
-    console.log(cart)
   }
 
   function removeCart() {
-    setCart((prevCart) => prevCart.filter((product) => product.id !== item.id));
-    console.log(cart)
+    setCart((prevCart) => prevCart.filter((product) => product.id != id));
   }
   return (
     <div className="Product-item">
       <img src={image} alt={image} />
       <h2>{name}</h2>
       <p>&#8377; {price}</p>
-      {cart.some((product) => (item.id === product.idCategory )) ? (
+      {cart.some((product) => (id == product.id )) ? (
         <button onClick={removeCart}>Remove Cart</button>
       ) : (
         <button onClick={addCart}>Add Cart</button>
@@ -31,10 +29,10 @@ function Product(item) {
 }
 
 Product.propTypes = {
-  id : PropTypes.number.isRequired,
+  id : PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
+  price: PropTypes.string.isRequired,
 };
 
 export default Product;
