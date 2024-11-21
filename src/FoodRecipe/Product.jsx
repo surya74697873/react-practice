@@ -18,7 +18,7 @@ function Product(item) {
     <div className="Product-item">
       <img src={image} alt={image} />
       <h2>{name}</h2>
-      <p>&#8377; {price}</p>
+      <p>&#8377; {200 + Number(price)}</p>
       {cart.some((product) => (id == product.id )) ? (
         <button onClick={removeCart}>Remove Cart</button>
       ) : (
