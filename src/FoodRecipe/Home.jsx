@@ -13,6 +13,7 @@ const Home = () => {
       );
       const resData = await res.json();
       setData(resData.categories);
+      console.log("rendered")
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -21,10 +22,11 @@ const Home = () => {
   useEffect(() => {
     apiCall();
   }, []);
-  //console.log(data);
+
+
   return (
     <div className="Home">
-      {data.length > 0 &&
+      {data.length > 0 ? 
         data.map((item) => (
           <Product
             key={item.idCategory} 
@@ -33,7 +35,7 @@ const Home = () => {
             name={item.strCategory}
             price={item.idCategory}
           />
-        ))}
+        )) : <p>Loading......</p>}
     </div>
   );
 };
