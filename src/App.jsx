@@ -4,8 +4,8 @@
 // import Clock from "./DigitalClock/Clock";
 // import ImageSlider from "./ImageSlider/ImageSlider";
 import "./App.css";
-import Context from "./FoodRecipe/Context";
-import FoodRecipe from "./FoodRecipe/FoodRecipe";
+//import Context from "./FoodRecipe/Context";
+//import FoodRecipe from "./FoodRecipe/FoodRecipe";
 // import FilterTable from './FilterTable/FilterTable';
 // import PasswordGenerator from './PasswordGenerator/PasswordGenerator';
 // import WeatherForecast from './WeatherForecast/WeatherForecast';
@@ -13,6 +13,8 @@ import FoodRecipe from "./FoodRecipe/FoodRecipe";
 //import NavBar from './ResponsiveNavbar/NavBar';
 // import Quiz from "./Quiz/Quiz";
 // import Quotes from './Quotes/Quotes';
+import FireBaseCRUD from "./FireBaseCRUD/FireBaseCRUD"
+
 
 const App = () => {
   return (
@@ -29,9 +31,10 @@ const App = () => {
       {/* <Quotes url='https://api.api-ninjas.com/v1/quotes' apiKey='cZWKPfFHmBBxoHB2+vEW2w==dITHcEDEXE23LcVn'/> */}
       {/* <PasswordGenerator /> */}
       {/* <FilterTable /> */}
-      <Context>
+      {/*<Context>
         <FoodRecipe />
-      </Context>
+      </Context>*/}
+      <FireBaseCRUD/>
     </div>
   );
 };
